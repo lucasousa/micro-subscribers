@@ -1,0 +1,10 @@
+version: "3.9"
+   
+services:
+  app:
+    build: .
+    command: ./.docker/entrypoint.sh
+    volumes:
+      - .:/home/python/app  
+    ports:
+      - "8000:8000"
